@@ -6,6 +6,9 @@
 //         5 6 7 8 9 
 // -------------------------
 
+// This is a homework
+// how to solve this with out using value variable
+
 #include<iostream>
 using namespace std;
 
