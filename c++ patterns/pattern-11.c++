@@ -6,9 +6,6 @@
 //         5 6 7 8 9 
 // -------------------------
 
-// This is a homework
-// how to solve this with out using value variable
-
 #include<iostream>
 using namespace std;
 
@@ -28,5 +25,25 @@ int main() {
         cout<<endl;
         row++;
     }
+}
 
+// how to solve this with out using value variable
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+
+    int row = 1;
+    while(row<=n){
+        int col = 1;
+        while(col<=row){
+            cout<<row + col - 1<<" ";
+            col++;
+        }
+        cout<<endl;
+        row++;
+    }
 }
