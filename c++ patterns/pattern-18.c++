@@ -1,26 +1,26 @@
 // -------------------------
 //         A  
-//         B B 
-//         C C C 
+//         B C
+//         C D E
+//         D E F G 
 // -------------------------
 
 #include<iostream>
 using namespace std;
 
-int main() {
+int main(){
     int n;
     cin>>n;
 
     int i = 1;
-    char ch = 'A';
     while(i<=n){
-        int j = 1;
+        int j=1;
         while(j<=i){
+            char ch = ('A' + i+ j -2);
             cout<<ch<<" ";
             j++;
         }
         cout<<endl;
-        ch+=1;
         i++;
     }
 }
