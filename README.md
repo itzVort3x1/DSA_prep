@@ -9,3 +9,4 @@ All the basic loops in c++, with examples.
 
 <h1>c++ Patterns folder</h1>
 27 different patterns from basic to advance, for better understanding of while loops and logical reasoning.
+<p>27th pattern problem is boss level pattern!</p>
