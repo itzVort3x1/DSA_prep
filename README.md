@@ -8,4 +8,4 @@ All the basics of C++.
 All the basic loops in c++, with examples.
 
 <h1>c++ Patterns folder</h1>
-21 different patterns to practice while loops and build logical reasoning.
+27 different patterns from basic to advance, for better understanding of while loops and logical reasoning.
