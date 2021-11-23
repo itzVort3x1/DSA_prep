@@ -10,3 +10,12 @@ All the basic loops in c++, with examples.
 <h1>c++ Patterns folder</h1>
 27 different patterns from basic to advance, for better understanding of while loops and logical reasoning.
 <p>27th pattern problem is boss level pattern!</p>
+
+<h1>c++ operators folder</h1>
+<p>Gives you basic understanding of all the operators in c++</p>
+
+<h1>c++ basic for loop problems</h1>
+<p>Helps you practise for loop with some problems.</p>
+
+<h1>c++ basic problems</h1>
+<p>Covers multiple topics from operators, loops, operator precedence & Variable Scoping</p>
