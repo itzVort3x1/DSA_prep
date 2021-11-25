@@ -4,4 +4,5 @@
     <li><b>Problem-3: </b>Convert a binary number to decimal.</li>
     <li><b>Problem-4: </b>Reverse Integer.</li>
     <li><b>Problem-5: </b>Complement of Base 10 Integer.</li>
+    <li><b>Problem-6: </b>Power of Two.</li>
 </ol>
