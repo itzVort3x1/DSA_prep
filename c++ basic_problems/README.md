@@ -6,4 +6,5 @@
     <li><b>Problem-4: </b>Reverse Integer.</li>
     <li><b>Problem-5: </b>Complement of Base 10 Integer.</li>
     <li><b>Problem-6: </b>Power of Two.</li>
+    <li><b>Problem-7: </b>Calculator Program using switch case.</li>
 </ol>
