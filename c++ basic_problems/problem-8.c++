@@ -17,4 +17,11 @@ int main() {
     cin>>amt;
 
     //use switch case.
+
+    int hundreds = 0;
+    int fifties = 0;
+    int twenties = 0;
+    int ones = 0;
+
+    // switch()
 }
