@@ -10,6 +10,24 @@
 #include<iostream>
 using namespace std;
 
+int calculateSetBits(int num){
+    int count = 0;
+    while(num!=0){
+        if(num&1){
+            count++;
+        }
+        num = num >> 1;
+    }
+    return count;
+}
+
 int main() {
-    
+    int a, b;
+    cin>>a>>b;
+
+    int setBitsinNum1 = calculateSetBits(a);
+    int setBitsinNum2 = calculateSetBits(b);
+
+    cout<<"The number of set bits in A & B is: "<< setBitsinNum1 + setBitsinNum2 << endl;
+    return 0;
 }
