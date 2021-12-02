@@ -12,4 +12,5 @@
     <li><b>Problem-10: </b>Arithmetic Progressions.</li>
     <li><b>Problem-11: </b>Number of set bits in A and B.</li>
     <li><b>Problem-12: </b>Nth Number in the fibonacci Sequence.</li>
+    <li><b>Problem-13: </b>Maximum and Minimum element in an array</li>
 </ol>
