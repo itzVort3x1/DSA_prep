@@ -11,4 +11,5 @@
     <li><b>Problem-9: </b>Calculating nCr.</li>
     <li><b>Problem-10: </b>Arithmetic Progressions.</li>
     <li><b>Problem-11: </b>Number of set bits in A and B.</li>
+    <li><b>Problem-12: </b>Nth Number in the fibonacci Sequence.</li>
 </ol>
