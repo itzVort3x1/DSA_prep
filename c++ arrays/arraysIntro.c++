@@ -2,26 +2,23 @@
 using namespace std;
 
 //HOLD
-void printArray() {
+void printArray(int  arr[], int size) {
+    cout<<"printing the array"<<endl;
 
+    for(int i=0; i<size; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<"Printing DONE"<<endl;
 }
 
 int main(){
     //declare
-    int number[15];
+    int number[15] = {5,7,11};
 
     //initialising an array
+    printArray(number, 15);
 
-    int second[3] = {5,7,11};
-
-    int third[15] = {2,7};
-    int n=15;
-
-    for(int i=0; i<n; i++){
-        cout<<third[i]<<endl;
-    }
-
-    cout << "Value at 0 index: " << third[1] <<endl;
+    char ch[5] = {'a', 'b', 'c', 'd'};
 
     return 0;
 }
