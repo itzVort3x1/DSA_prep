@@ -9,4 +9,5 @@
     <li><b>Problem-7: </b>Calculator Program using switch case.</li>
     <li><b>Problem-8: </b>Notes Counter.</li>
     <li><b>Problem-9: </b>Calculating nCr.</li>
+    <li><b>Problem-10: </b>Arithmetic Progressions.</li>
 </ol>
