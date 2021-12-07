@@ -4,7 +4,6 @@
 //          OUTPUT: 101
 //------------------------------------
 
-
 #include<iostream>
 #include<math.h>
 using namespace std;
