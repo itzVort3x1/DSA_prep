@@ -1,6 +1,6 @@
 //------------------------------------
 //      First and last occurance using binary search
-//      Ex: INPUT: arr = {1,2,3,3,3,3,3,8,1,2,4,3,5}
+//      Ex: INPUT: arr = {1,2,3,3,3,3,3,3,5,8}
 //          OUTPUT: 2 11
 //          EXPLANATION: 3 occurs first at index 2 and last occurance of 3 is index 11.
 //------------------------------------
@@ -53,10 +53,10 @@ int lastOcc(int arr[], int key, int n){
 }
 
 int main(){
-    int arr[13] = {1,2,3,3,3,3,3,8,1,2,4,3,5};
+    int arr[10] = {1,2,3,3,3,3,3,3,5,8};
 
-    cout << "First occurance of 3 is: " << firstOcc(arr, 3, 13)<<endl;
-    cout << "Last occurance of 3 is: " << lastOcc(arr, 3, 13);
+    cout << "First occurance of 3 is: " << firstOcc(arr, 3, 10)<<endl;
+    cout << "Last occurance of 3 is: " << lastOcc(arr, 3, 10);
 
     return 0;
 }
