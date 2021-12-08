@@ -5,4 +5,5 @@
     <li><b>Problem-3: </b>Peak Index in a Mountain Array.</li>
     <li><b>Problem-4: </b>Find Pivot in an array.</li>
     <li><b>Problem-5: </b>Search element in sorted and rotated array.</li>
+    <li><b>Problem-6: </b>Square root of a number using binary search.</li>
 </ol>
