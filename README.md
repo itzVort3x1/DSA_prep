@@ -28,3 +28,9 @@ All the basic loops in c++, with examples.
 
 <h1>binarySearch-problems</h1>
 <p>All problems using the concept of binarySearch algorithm.</p>
+
+<h1>Searching_algos</h1>
+<p>Linear and binary search algorithms.</p>
+
+<h1>sorting_algos</h1>
+<p>Bubble_sort, Selection_sort algorithms.</p>
