@@ -33,4 +33,4 @@ All the basic loops in c++, with examples.
 <p>Linear and binary search algorithms.</p>
 
 <h1>sorting_algos</h1>
-<p>Bubble_sort, Selection_sort algorithms.</p>
+<p>Bubble_sort, Selection_sort, Insertion_sort algorithms.</p>
