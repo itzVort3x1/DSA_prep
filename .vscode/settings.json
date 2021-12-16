@@ -5,6 +5,7 @@
         "deque": "cpp",
         "list": "cpp",
         "stack": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "set": "cpp"
     }
 }
