@@ -23,6 +23,9 @@ All the basic loops in c++, with examples.
 <h1>c++ array_problems</h1>
 <p>This covers all the problems on array from basics to advanced.</p>
 
+<h1>c++ STL</h1>
+<p>Gives you an overview of c++ standard library.</p>
+
 <h1>binarySearch-problems</h1>
 <p>All problems using the concept of binarySearch algorithm.</p>
 
