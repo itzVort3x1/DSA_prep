@@ -2,6 +2,7 @@
     "files.associations": {
         "ostream": "cpp",
         "iostream": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "list": "cpp"
     }
 }
