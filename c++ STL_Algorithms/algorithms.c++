@@ -36,7 +36,7 @@ int main(){
     
     reverse(abcd.begin(), abcd.end());
     
-    cout<<"string-> "<<abcd<<endl;
+    // cout<<"string-> "<<abcd<<endl;
     
     rotate(v.begin(), v.begin()+1, v.end());
     
