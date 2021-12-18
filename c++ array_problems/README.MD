@@ -5,4 +5,5 @@
     <li><b>Problem-3: </b>Swap Alternative elements in the array.</li>
     <li><b>Problem-4: </b>Find unique element in the array.</li>
     <li><b>Problem-9: </b>sort 0's and 1's.</li>
+    <li><b>Problem-10: </b>Reverse array using two pointer approach.</li>
 </ol>
