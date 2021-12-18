@@ -8,8 +8,8 @@
 #include<vector>
 using namespace std;
 
-vector<int> reverse(vector<int> v){
-    int s = 0; 
+vector<int> reverse(vector<int> v, int m){
+    int s = m+1; 
     int e = v.size()-1;
 
     while(s<e){
@@ -32,13 +32,15 @@ int main(){
 
     vector<int> v;
 
+    int m = 2;
+
     v.push_back(11);
     v.push_back(7);
     v.push_back(3);
     v.push_back(12);
     v.push_back(4);
 
-    vector<int> ans = reverse(v);
+    vector<int> ans = reverse(v, m);
 
     cout<<"Printing reverse array: "<<endl;
     print(ans);
