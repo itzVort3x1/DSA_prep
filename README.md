@@ -1,4 +1,4 @@
-# DSA_prep
+# DSA prep
 A complete guide from basics to advance on dsa prep.
 
 # c++ Basics folder
