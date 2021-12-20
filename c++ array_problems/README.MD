@@ -9,4 +9,5 @@
     <li><b>Problem-11: </b>Given an array 'ARR' of integers and a position ‘M’. You have to reverse the array after that position.</li>
     <li><b>Problem-12: </b>Given two arrays that are sorted, Merge the two arrays to from one array.</li>
     <li><b>Problem-13: </b>Move zeros to the right.</li>
+    <li><b>Problem-13: </b>Rotate an array if a position K is given..</li>
 </ol>
