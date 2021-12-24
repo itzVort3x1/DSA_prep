@@ -25,9 +25,11 @@ vector<int> reverse(vector<int> v){
 }
 
 void printArr(vector<int> v){
+    cout<<"The sum of the array is: ";
     for(int i=0; i<v.size(); i++){
-        cout<<"The sum of the array is: "<<v[i];
+        cout<<v[i];
     }
+    cout<<endl;
 }
 
 int main(){
@@ -43,26 +45,26 @@ int main(){
         int val1 = arr1[i];
         int val2 = arr2[j];
         int sum = val1 + val2 + carry;
-        ans.push_back(sum);
         carry = sum/10;
         sum = sum%10;
+        ans.push_back(sum);
         i--;
         j--;
     }
 
     while(i>=0){
         int sum = arr1[i] + carry;
-        ans.push_back(sum);
         carry = sum/10;
         sum = sum%10;
+        ans.push_back(sum);
         i--;
     }
 
     while(j>=0){
         int sum = arr2[j] + carry;
-        ans.push_back(sum);
         carry = sum/10;
         sum = sum%10;
+        ans.push_back(sum);
         j--;
     }
 
