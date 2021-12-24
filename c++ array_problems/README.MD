@@ -11,4 +11,5 @@
     <li><b>Problem-13: </b>Move zeros to the right.</li>
     <li><b>Problem-14: </b>Rotate an array if a position K is given.</li>
     <li><b>Problem-15: </b>Check if the array is sorted and rotated.</li>
+    <li><b>Problem-16: </b>Sum of two arrays.</li>
 </ol>
