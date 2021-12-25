@@ -1,5 +1,21 @@
 //------------------------------------
 //      Find duplicate
-//      Ex: INPUT: arr={2,5,6,8,12,9}
-//          OUTPUT: 5,1,8,6,9,12
+//      Ex: INPUT: arr={1, 2, 3, 4, 2, 7, 8, 8, 3}
+//          OUTPUT: 2, 3, 8
 //------------------------------------
+
+#include<iostream>
+
+using namespace std;
+
+int main() {
+    int arr[9] = {1, 2, 3, 4, 2, 7, 8, 8, 3};
+
+    for(int i=0; i<9-1; i++){
+        for(int j=i+1; j<9; j++){
+            if(arr[i] == arr[j]){
+                cout<<arr[i]<<" ";
+            }
+        }
+    }
+}
