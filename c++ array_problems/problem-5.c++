@@ -1,7 +1,7 @@
 //------------------------------------
-//      Find duplicate
+//      Find duplicates in an array
 //      Ex: INPUT: arr={1, 2, 3, 4, 2, 7, 8, 8, 3}
-//          OUTPUT: 2, 3, 8
+//          output: 2, 3, 8
 //------------------------------------
 
 #include<iostream>
