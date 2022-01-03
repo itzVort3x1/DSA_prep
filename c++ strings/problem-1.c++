@@ -1,5 +1,5 @@
 //------------------------------------
-//      Length of string
+//      Length of string.
 //      Ex: INPUT: n = hello
 //          OUTPUT: 5
 //------------------------------------
