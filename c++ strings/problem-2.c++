@@ -1,5 +1,5 @@
 //------------------------------------
-//      Reverse a string
+//      Reverse a string.
 //      Ex: INPUT: n = hello
 //          OUTPUT: olleh
 //------------------------------------
