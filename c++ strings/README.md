@@ -5,4 +5,5 @@
     <li><b>Problem-3: </b>Check if string is palindrome or not.</li>
     <li><b>Problem-4: </b>Convert string to lower case.</li>
     <li><b>Problem-5: </b>Valid Palindrome.</li>
+    <li><b>Problem-6: </b>Max occuring character.</li>
 </ol>

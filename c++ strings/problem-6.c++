@@ -1,7 +1,8 @@
 //------------------------------------
 //      Max occuring character
-//      Ex: INPUT: n = 
-//          OUTPUT: 
+//      Ex: INPUT: n = output 
+//          OUTPUT: t
+//          EXPLANATION: As t and u occurs 2 in the string but t comes before u.
 //------------------------------------
 
 #include<iostream>
