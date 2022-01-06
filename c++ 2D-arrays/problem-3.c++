@@ -4,6 +4,8 @@
 //                     2 12 1 -> 15
 //                     7 8  7 -> 22
 //          OUTPUT: 2
+//          EXPLANATION: 18 15 22
+//                       The largest among these 3 is 22 which is on row 2.
 //------------------------------------
 
 #include<iostream>
