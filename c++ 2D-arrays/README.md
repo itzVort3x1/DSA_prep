@@ -6,4 +6,5 @@
     <li><b>Problem-4: </b>Wave print.</li>
     <li><b>Problem-5: </b>Spiral print.</li>
     <li><b>Problem-6: </b>Binary Search a 2D Matrix.</li>
+    <li><b>Problem-7: </b>Binary Search a 2D Matrix Level-2.</li>
 </ol>

@@ -1,6 +1,6 @@
 //------------------------------------
 //      PROBLEM LINK: https://leetcode.com/problems/search-a-2d-matrix-ii/
-//      Binary Search a 2D Matrix
+//      Binary Search a 2D Matrix Level-2
 //      Ex: INPUT: n = 1 4 7 11 15
 //                     2 5 8 12 19
 //                     3 6 9 16 22
