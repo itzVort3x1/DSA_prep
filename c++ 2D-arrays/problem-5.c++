@@ -13,8 +13,8 @@ using namespace std;
 
 void sprialPrint(int arr[][3], int rows, int cols){
         vector<int> ans;
-        int row = 3;
-        int col = 3;
+        int row = rows;
+        int col = cols;
         
         int count = 0;
         int total = row*col;
