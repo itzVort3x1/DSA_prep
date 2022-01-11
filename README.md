@@ -45,3 +45,6 @@ All the basic loops in c++, with examples.
 
 <h1>Pointers</h1>
 <p>This gives you a complete overview of pointer in c++</p>
+
+<h1>Maths for DSA</h1>
+<p>Basic math algorithms for solving DSA problems.</p>
