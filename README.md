@@ -48,3 +48,6 @@ All the basic loops in c++, with examples.
 
 <h1>Maths for DSA</h1>
 <p>Basic math algorithms for solving DSA problems.</p>
+
+<h1>Reference variables</h1>
+<p>Explains Pass by value, Pass by reference.</p>
