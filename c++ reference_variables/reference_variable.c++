@@ -14,7 +14,7 @@ int* fun(int n){
     return ptr;
 }
 
-// pass by reference
+// pass by reference 
 void update2(int &n){
     n++;
 }
