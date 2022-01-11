@@ -1,7 +1,9 @@
 # DSA prep
+
 A complete guide from basics to advance on dsa prep.
 
 # c++ Basics folder
+
 All the basics of C++.
 
 <h1>c++ Loops folder</h1>
@@ -37,3 +39,6 @@ All the basic loops in c++, with examples.
 
 <h1>sorting_algos</h1>
 <p>Bubble_sort, Selection_sort, Insertion_sort algorithms.</p>
+
+<h1>2D-arrays</h1>
+<p>Basics to advanced problems on 2D arrays.</p>
