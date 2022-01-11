@@ -42,3 +42,6 @@ All the basic loops in c++, with examples.
 
 <h1>2D-arrays</h1>
 <p>Basics to advanced problems on 2D arrays.</p>
+
+<h1>Pointers</h1>
+<p>This gives you a complete overview of pointer in c++</p>
