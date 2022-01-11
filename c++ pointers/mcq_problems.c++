@@ -4,7 +4,6 @@ using namespace std;
 
 int main(){
     /*
-    1
     cout<<"MCQ-1 ->"<<endl;
     int first = 8;
     int second = 18;
@@ -32,10 +31,52 @@ int main(){
     int first = 110;
     *p = first;
     cout<<*p<<endl;
+
+    cout<<"MCQ-5 -> "<<endl;
+    int first = 8;
+    int second = 11;
+    int *third = &second;
+    first = *third;
+    *third = *third + 2;
+    cout<<first<<" "<<second<<endl;
+   
+    cout<<"MCQ-5 -> "<<endl;
+    float f = 12.5;
+    float p = 21.5;
+    float *ptr = &f;
+    (*ptr)++;
+    *ptr = p;
+    cout<< *ptr << " " << f << " " << p << endl;
+
+    cout<<"MCQ-6 -> "<<endl;
+    int arr[5];
+    int *ptr;
+    cout<<sizeof(arr)<<" "<<sizeof(ptr)<<endl;
+
+    cout<<"MCQ-7 -> "<<endl;
+    int arr[] = {11,21,13,14};
+   cout<<*(arr)<<" "<<*(arr+1)<<endl;
+
+    cout<<"MCQ-8 -> "<<endl;
+    // arr
+    // &arr
+    // &arr[0] are all same
+    int arr[6] = {11,12,31};
+    cout<<arr<<" "<<&arr<<endl;
+
+    cout<<"MCQ-9 -> "<<endl;
+    int arr[6] = {11,21,13};
+    cout<< (arr+1)<<endl;
+
+    cout<<"MCQ-10 -> "<<endl;
+    int arr[6] = {11,21,31};
+    int *p = arr;
+    cout<<p[2]<< endl;
     */
-    
 
 
-    return 1;
+
+
+    return 0;
 
 }
