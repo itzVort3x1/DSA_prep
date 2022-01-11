@@ -2,6 +2,18 @@
 
 using namespace std;
 
+//BAD practise
+int& func(int a){
+    int num = a;
+    int& ans = num;
+    return ans;
+}
+
+int* fun(int n){
+    int* ptr = &n;
+    return ptr;
+}
+
 // pass by reference
 void update2(int &n){
     n++;
@@ -32,6 +44,9 @@ int main(){
     cout<<"Before "<<n<<endl;
     update2(n);
     cout<<"After "<<n<<endl;
+
+    cout<< func(n) << endl;
+    cout<< fun(n) << endl;
 
 
     return 0;
