@@ -3,6 +3,7 @@
 using namespace std;
 
 int factorial(int n){
+    //base case in recursion
     if(n==0){
         return 1;
     }
