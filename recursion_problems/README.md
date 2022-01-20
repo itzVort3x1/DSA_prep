@@ -4,4 +4,5 @@
     <li><b>Problem-2: </b>Check if the string is palindrome or not.</li>
     <li><b>Problem-3: </b>Caluculating power using recursion.</li>
     <li><b>Problem-4: </b>Bubble sort using recursion.</li>
+    <li><b>Problem-5: </b>Merge sort using recursion.</li>
 </ol>
