@@ -5,4 +5,5 @@
     <li><b>Problem-3: </b>Caluculating power using recursion.</li>
     <li><b>Problem-4: </b>Bubble sort using recursion.</li>
     <li><b>Problem-5: </b>Merge sort using recursion.</li>
+    <li><b>Problem-6: </b>Quick sort using recursion.</li>
 </ol>
