@@ -6,4 +6,6 @@
     <li><b>Problem-4: </b>Bubble sort using recursion.</li>
     <li><b>Problem-5: </b>Merge sort using recursion.</li>
     <li><b>Problem-6: </b>Quick sort using recursion.</li>
+    <li><b>Problem-7: </b>Subsets.</li>
+    <li><b>Problem-8: </b>Subsequences of String.</li>
 </ol>
