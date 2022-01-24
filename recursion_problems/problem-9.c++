@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void solve(string digits, int index, string output, vector<string> ans, string mapping[]){
+void solve(string digits, int index, string output, vector<string>& ans, string mapping[]){
     if(index >= digits.length()){
         ans.push_back(output);
         return;
