@@ -8,6 +8,7 @@
     "queue": "cpp",
     "set": "cpp",
     "vector": "cpp",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "utility": "cpp"
   }
 }
