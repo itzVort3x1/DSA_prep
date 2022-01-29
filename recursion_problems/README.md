@@ -11,4 +11,5 @@
     <li><b>Problem-9: </b>Letter Combinations of a Phone Number.</li>
     <li><b>Problem-10: </b>Permutations.</li>
     <li><b>Problem-11: </b>Rat in a Maze problem-1.</li>
+    <li><b>Problem-12: </b>Digital Root.</li>
 </ol>
