@@ -1,5 +1,5 @@
 //------------------------------------
-//      Lucky number
+//      Power using recursion
 //              INPUT: n = 9 p = 9
 //              OUTPUT: 387420489
 //              EXPLANATION: 387420489 is the value 

@@ -15,4 +15,5 @@
     <li><b>Problem-13: </b>Tower of Hanoi.</li>
     <li><b>Problem-14: </b>Josephus problem.</li>
     <li><b>Problem-15: </b>Lucky number.</li>
+    <li><b>Problem-16: </b>Power using recursion.</li>
 </ol>
