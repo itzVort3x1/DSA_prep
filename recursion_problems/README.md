@@ -14,4 +14,5 @@
     <li><b>Problem-12: </b>Digital Root.</li>
     <li><b>Problem-13: </b>Tower of Hanoi.</li>
     <li><b>Problem-14: </b>Josephus problem.</li>
+    <li><b>Problem-15: </b>Lucky number.</li>
 </ol>
