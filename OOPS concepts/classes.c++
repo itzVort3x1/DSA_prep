@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cstring>
 using namespace std;
 
 class Hero{
@@ -7,10 +8,13 @@ class Hero{
     int health;
 
     public:
+    char *name;
     char level;
 
+    // default copy makes a shallow copy
     Hero(){
         cout<<"Constuctor called"<<endl;
+        name = new char[100];
     }
 
     //Parameterised constructor
@@ -26,7 +30,10 @@ class Hero{
     }
 
     void print(){
-        cout<<level<<endl;
+        cout<<endl;
+        cout<<"level is: "<<level<<endl;
+        cout<<"health is: "<<health<<endl;
+        cout<<"name: "<<name<<endl;
     }
 
     int getHealth(){
@@ -45,15 +52,25 @@ class Hero{
         level = ch;
     }
 
+    void setName(char name[]){
+        strcpy(this->name, name);
+    }
+
 };
 
 int main(){
 
     //static allocation
     Hero h1;
+    h1.setHealth(12);
+    h1.setLevel('D');
+    char name[7] = "hellos";
+    h1.setName(name);
 
-    //copying hero h1 object
-    // Hero h3(h1);
+    h1.print();
+
+    // copying hero h1 object
+    Hero h3(h1);
 
     
     // cout<<"level: "<<h1.getLevel()<<endl;
