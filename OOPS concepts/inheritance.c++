@@ -27,14 +27,17 @@ class Male: public Human{
 
 int main(){
 
-    Male object1;
-    cout<<object1.age<<endl;
-    cout<<object1.weight<<endl;
-    cout<<object1.height<<endl;
+    Male m1;
+    cout<<m1.height<<endl;
 
-    object1.setWeight(84);
-    cout<<object1.weight<<endl;
-    object1.sleep();
+    // Male object1;
+    // cout<<object1.age<<endl;
+    // cout<<object1.weight<<endl;
+    // cout<<object1.height<<endl;
+
+    // object1.setWeight(84);
+    // cout<<object1.weight<<endl;
+    // object1.sleep();
 
     return 0;
 }
