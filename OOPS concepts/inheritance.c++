@@ -36,8 +36,5 @@ int main(){
     cout<<object1.weight<<endl;
     object1.sleep();
 
-
-
     return 0;
-
 }
