@@ -55,6 +55,7 @@ void InsertAtPosition(int position, int d, Node* &head, Node* &tail){
     // insert at start case
     if(position == 1){
         InsertAtHead(head, d);
+        return;
     }
 
 
@@ -69,6 +70,7 @@ void InsertAtPosition(int position, int d, Node* &head, Node* &tail){
     //inserting at last position
     if(temp -> next == NULL){
         InsertAtTail(tail, d);
+        return;
     }
 
     //create a new node

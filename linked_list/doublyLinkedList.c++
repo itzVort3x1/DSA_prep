@@ -52,8 +52,8 @@ void InsertAtPosition(Node* &head,int position, int data, Node* &tail){
     // insert at start case
     if(position == 1){
         InsertAtHead(head, data);
+        return;
     }
-
 
     Node* temp = head;
     int cnt = 1;
@@ -66,6 +66,7 @@ void InsertAtPosition(Node* &head,int position, int data, Node* &tail){
     //inserting at last position
     if(temp -> next == NULL){
         InsertAtTail(tail, data);
+        return;
     }
 
     //create a new node
@@ -94,7 +95,10 @@ int main(){
     InsertAtHead(head, 8);
     print(head);
 
-    InsertAtPosition(head, 3, 5, tail);
+    InsertAtPosition(head, 3, 100, tail);
+    print(head);
+
+    InsertAtPosition(head, 1, 101, tail);
     print(head);
 
 
