@@ -34,24 +34,39 @@ int getLength(Node* head){
     return len;
 }
 
-void InsertAtHead(Node* &head, int data){
-    Node* temp = new Node(data);
-    temp -> next = head;
-    head -> prev = temp;
-    head = temp;
+void InsertAtHead(Node* &tail ,Node* &head, int data){
+
+    //
+    if(head == NULL){
+        Node* temp = new Node(data);
+        head = temp;
+        tail = temp;
+
+    }else {
+        Node* temp = new Node(data);
+        temp -> next = head;
+        head -> prev = temp;
+        head = temp;
+    }
+    
 }
 
-void InsertAtTail(Node* &tail, int data){
-    Node* temp = new Node(data);
-    temp -> prev = tail;
-    tail -> next = temp;
-    tail = temp;
+void InsertAtTail(Node* &tail, Node* &head, int data){
+    if(tail == NULL){
+        Node* temp = new Node(data);
+        tail = temp;
+    }else {
+        Node* temp = new Node(data);
+        temp -> prev = tail;
+        tail -> next = temp;
+        tail = temp;
+    }
 }
 
 void InsertAtPosition(Node* &head,int position, int data, Node* &tail){
     // insert at start case
     if(position == 1){
-        InsertAtHead(head, data);
+        InsertAtHead(tail,head, data);
         return;
     }
 
@@ -65,7 +80,7 @@ void InsertAtPosition(Node* &head,int position, int data, Node* &tail){
 
     //inserting at last position
     if(temp -> next == NULL){
-        InsertAtTail(tail, data);
+        InsertAtTail(tail, head,data);
         return;
     }
 
@@ -86,13 +101,13 @@ int main(){
     print(head);
     // cout<<"Length of linked list: "<<getLength(head)<<endl;
 
-    InsertAtTail(tail, 11);
+    InsertAtTail(tail, head,11);
     print(head);
 
-    InsertAtTail(tail, 12);
+    InsertAtTail(tail, head,12);
     print(head);
 
-    InsertAtHead(head, 8);
+    InsertAtHead(head, head,8);
     print(head);
 
     InsertAtPosition(head, 3, 100, tail);
@@ -100,6 +115,9 @@ int main(){
 
     InsertAtPosition(head, 1, 101, tail);
     print(head);
+
+    cout<< "head "<<head -> data<<endl;
+    cout<< "tail "<<tail -> data<<endl;
 
 
     return 0;
