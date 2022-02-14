@@ -54,3 +54,6 @@ All the basic loops in c++, with examples.
 
 <h1>Recursion</h1>
 <p>All about recursion in c++, from basics</p>
+
+<h1>OOPS concepts</h1>
+<p>Get a better understanding of classes, operators, and the pillars of OOPS</p>
