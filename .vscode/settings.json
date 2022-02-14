@@ -9,6 +9,8 @@
     "set": "cpp",
     "vector": "cpp",
     "xstring": "cpp",
-    "utility": "cpp"
+    "utility": "cpp",
+    "array": "cpp",
+    "xutility": "cpp"
   }
 }
