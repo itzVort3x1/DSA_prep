@@ -57,3 +57,6 @@ All the basic loops in c++, with examples.
 
 <h1>OOPS concepts</h1>
 <p>Get a better understanding of classes, operators, and the pillars of OOPS</p>
+
+<h1>Linked List</h1>
+<p>concepts of linked list, circular linked list, doubly linked list</p>
