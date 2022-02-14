@@ -60,3 +60,6 @@ All the basic loops in c++, with examples.
 
 <h1>Linked List</h1>
 <p>concepts of linked list, circular linked list, doubly linked list</p>
+
+<h1>Linked_list_problems</h1>
+<p>Problems related to linked list concepts</p>
