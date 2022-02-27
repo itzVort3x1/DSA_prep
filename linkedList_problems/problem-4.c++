@@ -1,5 +1,5 @@
 //------------------------------------
-//      Circular Linked List
+//      detec if the linked list is circular or not.
 //------------------------------------
 
 #include<iostream>
