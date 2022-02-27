@@ -3,4 +3,5 @@
     <li><b>Problem-1: </b>Reversing a linked list using iterative approach.</li>
     <li><b>Problem-2: </b>Getting the middle of linked list.</li>
     <li><b>Problem-3: </b>Linked list reverse K groups.</li>
+    <li><b>Problem-4: </b>detect if the linked list is circular or not.</li>
 </ol>
