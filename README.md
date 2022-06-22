@@ -1,4 +1,4 @@
-# DSA prep
+# DSA prep.
 
 A complete guide from basics to advance on dsa prep.
 
