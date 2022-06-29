@@ -16,95 +16,41 @@ void print(int arr[], int s, int e)
      }
 }
 
-int firstOc(int arr[], int key, int s, int e)
+int first(int arr[], int low, int high, int x, int n)
 {
-     print(arr, s, e);
-     cout << endl;
-     int mid = s + (e - s) / 2;
-     int ans = -1;
-     if (s > e)
-     {
-          return ans;
-     }
-     if (arr[mid] == key)
-     {
-          ans = mid;
-          firstOc(arr, key, s, mid - 1);
-     }
-     if (arr[mid] < key)
-     {
-          firstOc(arr, key, s, mid - 1);
-     }
-     else
-     {
-          firstOc(arr, key, mid + 1, e);
-     }
-     return ans;
+    if (high >= low) {
+        int mid = low + (high - low) / 2;
+        if ((mid == 0 || x > arr[mid - 1]) && arr[mid] == x)
+            return mid;
+        else if (x > arr[mid])
+            return first(arr, (mid + 1), high, x, n);
+        else
+            return first(arr, low, (mid - 1), x, n);
+    }
+    return -1;
 }
 
-int firstOcc(int arr[], int key, int n)
-{
-     int s = 0, e = n - 1;
-     int mid = s + (e - s) / 2;
-
-     int ans = -1;
-
-     while (s <= e)
-     {
-          if (arr[mid] == key)
-          {
-               ans = mid;
-               e = mid - 1;
+int last(int arr[], int low, int high, int x, int n){
+     if(high >= low){
+          int mid = low + (high - low)/2;
+          if((mid == n-1 || x < arr[mid + 1]) && arr[mid] == x){
+               return mid;
+          }else if(x < arr[mid]){
+               return last(arr, low, (mid - 1), x, n);
+          }else {
+               return last(arr, (mid + 1), high, x, n);
           }
-          else if (key > arr[mid])
-          {
-               s = mid + 1;
-          }
-          else if (key < arr[mid])
-          {
-               e = mid - 1;
-          }
-          mid = s + (e - s) / 2;
      }
-
-     return ans;
-}
-
-int lastOcc(int arr[], int key, int n)
-{
-     int s = 0, e = n - 1;
-     int mid = s + (e - s) / 2;
-
-     int ans = -1;
-
-     while (s <= e)
-     {
-          if (arr[mid] == key)
-          {
-               ans = mid;
-               s = mid + 1;
-          }
-          else if (key > arr[mid])
-          {
-               s = mid + 1;
-          }
-          else if (key < arr[mid])
-          {
-               e = mid - 1;
-          }
-          mid = s + (e - s) / 2;
-     }
-
-     return ans;
+     return -1;
 }
 
 int main()
 {
      int arr[10] = {1, 2, 3, 3, 3, 3, 3, 3, 5, 8};
-     firstOc(arr, 3, 0, 9);
-     // cout << "First occurance of 3 is: " << firstOc(arr, 3, 0, 9) << endl;
-     cout
-         << "Last occurance of 3 is: " << lastOcc(arr, 3, 10);
+     int n = sizeof(arr) / sizeof(int);
+     // first(arr, 0, 9, 3, n);
+     cout << "First occurance of 3 is: " << first(arr, 0, 9, 3, n) << endl;
+     cout << "Last occurance of 3 is: " << last(arr, 0, 9, 3, n) << endl;
 
      return 0;
 }
