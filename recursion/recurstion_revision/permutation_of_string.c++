@@ -17,7 +17,7 @@ void solve(vector<int> nums, vector<vector<int> > &ans, int index){
 }
 
 int main(){
-     cout<<"Enter size of Array: ";
+    cout<<"Enter size of Array: ";
     int size;
     cin>>size;
     vector<vector<int> > ans;
