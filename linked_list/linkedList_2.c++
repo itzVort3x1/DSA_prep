@@ -12,6 +12,16 @@ class Node {
           this -> data = data;
           this -> next = NULL;
      }
+
+     //destructor
+     ~Node(){
+          int value = this -> data;
+          if(this->next != NULL){
+               delete next;
+               next = NULL;
+          }
+          cout << " memory is free for node with data " << value << endl;
+     }
 };
 
 void insertAtHead(Node* &head, int d){
@@ -55,6 +65,55 @@ void insertAtPosition(Node* &head, Node* &tail, int position, int d){
 
 }
 
+void deleteNodeByPosition(int position, Node* &head){
+
+     // deleting start node
+     if(position == 1){
+          Node* temp = head;
+          head = head -> next;
+          temp -> next = NULL;
+          //memory free start node
+          delete temp;
+     }else {   
+          //deleting any middle node or last node
+          Node* curr = head;
+          Node* prev = NULL;
+
+          int cnt = 1;
+          while(cnt < position){
+               prev = curr;
+               curr = curr -> next;
+               cnt++;
+          }
+          prev -> next = curr -> next;
+          curr -> next = NULL;
+          delete curr;
+     }
+}
+
+void deleteNodeByValue(int d, Node* &head){
+     if(d == head -> data){
+          Node* temp = head;
+          head = head -> next;
+          temp -> next = NULL;
+          //memory free start node
+          delete temp;
+     }else {
+          // deleting any middle node or last node
+          Node* curr = head;
+          Node* prev = NULL;
+
+          while(d == curr -> data){
+               prev = curr;
+               curr = curr -> next;
+          }
+
+          prev -> next = curr -> next;
+          curr -> next = NULL;
+          delete curr;
+     }
+}
+
 void print(Node* &head){
      Node* temp = head;
      while(temp != NULL){
@@ -90,6 +149,14 @@ int main(){
 
      cout << "head: " << head -> data << endl;
      cout << "tail: " << tail -> data << endl;
+
+     deleteNodeByPosition(3, head);
+
+     print(head);
+
+     deleteNodeByValue(5, head);
+
+     print(head);
 
 
      return 0;
