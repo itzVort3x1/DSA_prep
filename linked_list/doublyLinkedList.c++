@@ -40,24 +40,39 @@ int getLength(Node* head){
      return len;
 }
 
-void insertAtHead(Node* &head, int d){
-     Node* temp = new Node(d);
-     temp -> next = head;
-     head -> prev = temp;
-     head = temp;
+void insertAtHead(Node* &head, Node* &tail, int d){
+
+     // empty list
+     if(head == NULL){
+          Node* temp = new Node(d);
+          head = temp;
+          tail = temp;
+     }else {
+          Node* temp = new Node(d);
+          temp -> next = head;
+          head -> prev = temp;
+          head = temp;
+     }
 }
 
-void insertAtTail(Node* &tail, int d){
-     Node* temp = new Node(d);
+void insertAtTail(Node* &head, Node* &tail, int d){
 
-     tail -> next = temp;
-     temp -> prev = tail;
-     tail = temp;
+     if(head == NULL){
+          Node* temp = new Node(d);
+          tail = temp;
+          head = temp; 
+     }else {
+          Node* temp = new Node(d);
+
+          tail -> next = temp;
+          temp -> prev = tail;
+          tail = temp;
+     }
 }
 
-void insertAtPosition(Node* &head, Node* &tail,int position,int d){
+void insertAtPosition(Node* &head, Node* &tail,int position, int d){
      if(position == 1){
-          insertAtHead(head, d);
+          insertAtHead(head, tail, d);
           return;
      }
 
@@ -70,7 +85,7 @@ void insertAtPosition(Node* &head, Node* &tail,int position,int d){
      }
 
      if(temp -> next == NULL){
-          insertAtTail(tail, d);
+          insertAtTail(head, tail, d);
           return;
      }
 
@@ -91,13 +106,13 @@ int main(){
 
      cout << "length of the linked list: " << getLength(head) << endl;
 
-     insertAtHead(head, 11);
+     insertAtHead(head, tail, 11);
      print(head);
-     insertAtHead(head, 13);
+     insertAtHead(head, tail,  13);
      print(head);
-     insertAtHead(head, 18);
+     insertAtHead(head, tail,  18);
      print(head);
-     insertAtTail(tail, 25);
+     insertAtTail(head, tail, 25);
      print(head);
      insertAtPosition(head, tail, 2, 100);
      print(head);
