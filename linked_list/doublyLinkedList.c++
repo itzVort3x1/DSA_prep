@@ -99,6 +99,12 @@ int main(){
      print(head);
      insertAtTail(tail, 25);
      print(head);
+     insertAtPosition(head, tail, 2, 100);
+     print(head);
+     insertAtPosition(head, tail, 1, 101);
+     print(head);
+     insertAtPosition(head, tail, 8, 102);
+     print(head);
 
      return 0;
 }
