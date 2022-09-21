@@ -33,7 +33,7 @@ void print(Node* &head){
      cout << endl;
 };
 
-void reverseLinkedList(Node* &head, Node* curr, Node* prev){
+void reverseLinkedList(Node* &head, Node* &curr, Node* &prev){
 
      if(curr == NULL){
           head = prev;
