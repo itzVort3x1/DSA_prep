@@ -33,7 +33,7 @@ void print(Node* head){
 bool isCircular(Node* head){
      //empty list
      if(head == NULL){
-          return false;
+          return true;
      }
 
      Node* temp = head -> next;
