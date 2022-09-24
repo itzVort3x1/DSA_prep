@@ -127,6 +127,31 @@ bool detectLoop(Node* &head){
 
 }
 
+bool floydDetectLoop(Node* head){
+
+     if(head == NULL){
+          return false;
+     }
+
+     Node* slow = head;
+     Node* fast = head;
+
+     while(slow != NULL && fast != NULL){
+          fast = fast -> next;
+          if(fast != NULL){
+               fast = fast -> next;
+          }
+          slow = slow -> next;
+
+          if(slow == fast){
+               cout << "cycle present at " << slow -> data << endl;
+               return true;
+          }
+     }
+
+     return false;
+}
+
 int main(){
      Node* tail = NULL;
 
@@ -146,13 +171,13 @@ int main(){
      // deleteNode(tail, 4);
      // print(tail);
 
-     if(isCircular(tail)){
-          cout << "This is a circular linked list." << endl;
-     }else {
-          cout << "This is not a circular linked list" << endl;
-     }
+     // if(isCircular(tail)){
+     //      cout << "This is a circular linked list." << endl;
+     // }else {
+     //      cout << "This is not a circular linked list" << endl;
+     // }
 
-     if(detectLoop(tail)){
+     if(floydDetectLoop(tail)){
           cout << "Loop exists in this linked list" << endl;
      }else {
           cout << "Loop does not exist in this linked list" << endl;
