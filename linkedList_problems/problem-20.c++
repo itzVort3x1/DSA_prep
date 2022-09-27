@@ -94,4 +94,12 @@ int main(){
           cout << "The given list is not palindrome" << endl;
      }
 
+     cout << "List after Checking for palindrome: " << endl;
+     Print(head);
+     temp = middle -> next;
+     middle -> next = reverseList(temp);
+
+     cout << "Original List: " << endl;
+     Print(head);
+
 }
