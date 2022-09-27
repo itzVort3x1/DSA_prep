@@ -69,29 +69,29 @@ void removeDuplicates(Node* &head){
      }     
 }
 
-void removeDuplicatedUsingMap(Node* &head){
-     if(head == NULL){
-          return;
-     }
+// void removeDuplicatedUsingMap(Node* &head){
+//      if(head == NULL){
+//           return;
+//      }
 
-     map<Node*, bool> visited;
+//      map<Node*, bool> visited;
 
-     Node* temp = head;
-     Node* prev = head;
+//      Node* temp = head;
+//      Node* prev = head;
 
-     while(temp != NULL){
+//      while(temp != NULL){
           
-          // if(visited[temp]){
-          //      prev -> next = curr -> next -> next;
-          //      curr = curr -> next;
-          // }else {
-          //      visited[temp] = true;
-          //      prev = curr;
-          //      curr = curr -> next;
-          // }
-     }
-     // return head;
-}
+//           if(visited[temp]){
+//                prev -> next = curr -> next -> next;
+//                curr = curr -> next;
+//           }else {
+//                visited[temp] = true;
+//                prev = curr;
+//                curr = curr -> next;
+//           }
+//      }
+//      // return head;
+// }
 
 
 int main(){
