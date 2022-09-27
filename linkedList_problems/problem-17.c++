@@ -20,6 +20,7 @@ class Node{
      ~Node(){
           if(this -> next != NULL){
                delete next;
+               next = NULL; 
           }
      }
 };
