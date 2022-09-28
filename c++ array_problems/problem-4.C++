@@ -1,7 +1,7 @@
 //------------------------------------
 //      Find unique element in the array
 //      Ex: INPUT: arr={2,4,2,3,4,5,3}
-//          OUTPUT: 4
+//          OUTPUT: 5
 //------------------------------------
 
 #include<iostream>
