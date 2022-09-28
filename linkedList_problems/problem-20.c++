@@ -73,13 +73,13 @@ bool isPalindrom(Node* head, Node* mid){
 }
 
 int main(){
-     Node* node1 = new Node(5);
+     Node* node1 = new Node(2);
      Node* head = node1;
 
-     InserAtHead(head, 4);
-     InserAtHead(head, 3);
-     InserAtHead(head, 4);
-     InserAtHead(head, 5);
+     InserAtHead(head, 1);
+     // InserAtHead(head, 3);
+     // InserAtHead(head, 4);
+     // InserAtHead(head, 5);
      Print(head);
 
      Node* middle = getMid(head);
