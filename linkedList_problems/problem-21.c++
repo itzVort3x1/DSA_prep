@@ -1,5 +1,5 @@
 //------------------------------------
-//        Check if the linked list is palindrome or not - APPROACH - 2
+//        Add 2 Numbers represented by Linked Lists
 //------------------------------------
 
 #include<iostream>
