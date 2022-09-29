@@ -36,7 +36,7 @@ Node* getMid(Node* head){
      Node* slow = head;
      Node* fast = head -> next;
 
-     while(fast != NULL){
+     while(fast != NULL && fast -> next != NULL){
           fast = fast -> next;
           if(fast != NULL){
                fast = fast -> next;
