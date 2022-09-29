@@ -55,6 +55,7 @@ Node* reverseList(Node* head){
 
 void InsertAtTail(Node* &head, Node* &tail, int value){
      Node* temp = new Node(value);
+     // empty list case
      if(head == NULL){
           head = temp;
           tail = temp;
@@ -71,8 +72,19 @@ Node* add(Node* first, Node* second){
      Node* ansHead = NULL;
      Node* ansTail = NULL;
 
-     while(first != NULL && second != NULL){
-          int sum = carry + first -> data + second -> data;
+     while(first != NULL || second != NULL || carry != 0){
+
+          int value1 = 0;
+          if(first != NULL){
+               value1 = first -> data;
+          }
+
+          int value2 = 0;
+          if(second != NULL){
+               value2 = second -> data;
+          }
+
+          int sum = carry + value1 + value2;
 
           int digit = sum % 10;
 
@@ -80,8 +92,15 @@ Node* add(Node* first, Node* second){
           InsertAtTail(ansHead, ansTail, digit);
 
           carry = sum / 10;
+
+          if(first != NULL){
+               first = first -> next;
+          }
+          if(second != NULL){
+               second = second -> next;
+          }
      }
-     
+     return ansHead;
 }
 
 int main(){
@@ -108,4 +127,7 @@ int main(){
      Print(second);
 
      Node* ans = add(first, second);
+     cout << "The sum of the two linked lists is: ";
+     Node* reversedAns = reverseList(ans);
+     Print(reversedAns);
 }
