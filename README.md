@@ -63,3 +63,6 @@ All the basic loops in c++, with examples.
 
 <h1>Linked_list_problems</h1>
 <p>Problems related to linked list concepts</p>
+
+<h1>Stack Problems</h1>
+<p>Problems related to stacks</p>
