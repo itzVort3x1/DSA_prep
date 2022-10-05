@@ -107,14 +107,20 @@ int main(){
      cout<< "Printing the level order traversal output " << endl;
      levelOrderTraversal(root);
 
-     cout << "Inorder Traversal is: " << endl;
+     cout << "Inorder Traversal is: ";
      inorder(root);
 
-     cout << "Preorder Traversal is: " << endl;
+     cout << endl;
+
+     cout << "Preorder Traversal is: ";
      preorder(root);
 
-     cout << "Postorder Traversal is: " << endl;
+     cout << endl;
+
+     cout << "Postorder Traversal is: ";
      postorder(root);
+
+     cout << endl;
 
      return 0;
 }
