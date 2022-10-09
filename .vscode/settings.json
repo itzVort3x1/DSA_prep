@@ -12,6 +12,7 @@
     "utility": "cpp",
     "array": "cpp",
     "xutility": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "map": "cpp"
   }
 }
