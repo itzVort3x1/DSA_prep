@@ -73,6 +73,18 @@ void takeInput(Node* &root){
      }
 }
 
+Node* minVal(Node* root){
+     if(root == NULL){
+        return root;
+    }
+    
+    Node* temp = root;
+    while(temp -> left != NULL){
+        temp = temp -> left;
+    }
+    return temp;
+}
+
 Node* deleteFromBst(Node* root, int val){
      if(root == NULL){
           return root;
@@ -123,6 +135,10 @@ int main(){
      cout << "Enter data to create BST" << endl;
 
      takeInput(root);
+
+     levelOrderTraversal(root);
+
+     root = deleteFromBst(root, 30);
 
      levelOrderTraversal(root);
 
