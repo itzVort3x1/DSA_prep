@@ -14,5 +14,6 @@
     "xutility": "cpp",
     "iosfwd": "cpp",
     "map": "cpp"
-  }
+  },
+  "C_Cpp.errorSquiggles": "Disabled"
 }
