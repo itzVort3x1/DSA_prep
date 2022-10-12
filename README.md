@@ -69,3 +69,6 @@ All the basic loops in c++, with examples.
 
 <h1>Queue Problems</h1>
 <p>Problems related to Queues</p>
+
+<h1>trees</h1>
+<p>Problems related to Binary Search Trees</p>
