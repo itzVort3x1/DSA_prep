@@ -29,6 +29,12 @@ int main(){
      //using this syntax for a key that is not present gives 0 as the answer.
      cout << m["unknownKey"] << endl;
 
+     //size
+     cout << m.size() << endl;
+
+     //to check presence if it exists in the map
+     cout << m.count("yours") << endl;
+
      return 0;
 
 }
