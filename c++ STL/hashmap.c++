@@ -10,15 +10,24 @@ int main(){
 
      //insertion
      //1
-     pair<string, int> p = make_pair("babbar", 3);
+     pair<string, int> p = make_pair("are", 3);
      m.insert(p);
 
      //2
-     pair<string, int> q("love", 2);
+     pair<string, int> q("hello", 2);
      m.insert(q);
 
      //3
-     m["mera"] = 1;
+     m["yours"] = 1;
+
+     //search
+     cout << m["yours"] << endl;
+     cout << m.at("are") << endl;
+
+     //using the at keyword for a key that is not present throws an error.
+     // cout << m.at("unknownKey") << endl;
+     //using this syntax for a key that is not present gives 0 as the answer.
+     cout << m["unknownKey"] << endl;
 
      return 0;
 
