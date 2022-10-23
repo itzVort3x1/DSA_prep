@@ -77,6 +77,29 @@ class Trie{
           return searchUtil(root, word);
      }
 
+     void deleteUtil(TrieNode* root, string word){
+          if(word.length() == 0){
+               root -> isTerminal = false;
+               return;
+          }
+
+          int index = word[0] - 'A';
+          TrieNode* child;
+
+          if(root -> children[index] != NULL){
+               child = root -> children[index];
+          }else {
+               return;
+          }
+
+          return deleteUtil(child, word.substr(1));
+
+     }
+
+     void deleteWord(string word){
+          return deleteUtil(root, word);
+     }
+
 };
 
 int main(){
@@ -86,7 +109,9 @@ int main(){
      t -> insertWord("ARM");
      t -> insertWord("DO");
      t -> insertWord("TIME");
-     cout << "Present or Not: " << t->search("TIM") << endl;
+     cout << "Present or Not: " << t->search("DO") << endl;
+     t -> deleteWord("DO");
+     cout << "Present or Not: " << t->search("DO") << endl;
 
 
      return 0;
