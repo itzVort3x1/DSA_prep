@@ -39,6 +39,11 @@ int main(){
      m.erase("are");
      cout << m.size() << endl;
 
+     // first method of looping through the array.
+     for(auto i:m){
+          cout << i.first << " " << i.second << endl;
+     }
+
      return 0;
 
 }
