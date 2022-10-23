@@ -35,6 +35,10 @@ int main(){
      //to check presence if it exists in the map
      cout << m.count("yours") << endl;
 
+     //erase
+     m.erase("are");
+     cout << m.size() << endl;
+
      return 0;
 
 }
