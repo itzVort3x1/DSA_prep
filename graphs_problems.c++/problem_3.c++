@@ -13,8 +13,7 @@ using namespace std;
 class Graph{
      public:
           unordered_map<int, list<int> > adj;
-          vector<int> ans;
-
+          unordered_map<int, bool> visited;
           void addEdge(int u, int v){
                adj[u].push_back(v);
                adj[v].push_back(u);
@@ -28,6 +27,22 @@ class Graph{
                     }
                     cout << endl;
                }
+          }
+
+          bool isCyclicDFS(int node, int parent){
+               visited[node] = 1;
+
+               for(auto it:adj[node]){
+                    if(!visited[it]){
+                         bool cycleDetected = isCyclicDFS(it, node);
+                         if(cycleDetected){
+                              return true;
+                         }
+                    }else if(it!=parent){
+                         return true;
+                    }
+               }
+               return false;
           }
 };
 
@@ -49,6 +64,18 @@ int main(){
           g.addEdge(u, v);
      }
      cout << endl;
+     g.printList();
+
+     for(int i=0; i<n; i++){
+          if(!g.visited[i]){
+               bool ans = g.isCyclicDFS(i, -1);//node, parent arguments for the first one the parent will be -1;
+               if(ans == 1){
+                    cout << "This is a Cyclic Graph" << endl;
+               }else {
+                    cout << "This is not a Cyclic Graph" << endl;
+               }
+          }
+     }
 
 
 }
