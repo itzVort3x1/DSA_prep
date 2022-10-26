@@ -28,22 +28,6 @@ class Graph{
                     cout << endl;
                }
           }
-
-          bool isCyclicDFS(int node, int parent){
-               visited[node] = 1;
-
-               for(auto it:adj[node]){
-                    if(!visited[it]){
-                         bool cycleDetected = isCyclicDFS(it, node);
-                         if(cycleDetected){
-                              return true;
-                         }
-                    }else if(it!=parent){
-                         return true;
-                    }
-               }
-               return false;
-          }
 };
 
 int main(){
