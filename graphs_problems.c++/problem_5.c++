@@ -5,6 +5,7 @@
 #include<iostream>
 #include<list>
 #include<queue>
+#include<stack>
 #include<vector>
 #include<map>
 #include<unordered_map>
@@ -14,7 +15,7 @@ class Graph{
      public:
           unordered_map<int, list<int> > adj;
           unordered_map<int, bool> visited;
-          unordered_map<int, bool> dfsVisited;
+          stack<int> s;
           void addEdge(int u, int v){
                adj[u].push_back(v);
           }
@@ -27,6 +28,17 @@ class Graph{
                     }
                     cout << endl;
                }
+          }
+
+          void topSort(int node){
+               visited[node] = 1;
+
+               for(auto it:adj[node]){
+                    if(!visited[it]){
+                         topSort(it);
+                    }
+               }
+               s.push(node);
           }
 };
 
@@ -49,4 +61,15 @@ int main(){
      }
      cout << endl;
      g.printList();
+     for(int i=0; i<n; i++){
+          if(!g.visited[i]){
+               g.topSort(i);
+          }
+     }
+
+     while(!g.s.empty()){
+          cout << g.s.top() << " ";
+          g.s.pop();
+     }
+
 }
