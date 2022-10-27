@@ -22,15 +22,15 @@ class Graph{
                adj[v].push_back(make_pair(u,w));
           }
 
-          void printList(){
-               for(auto i:adj){
-                    cout << i.first << "-> ";
-                    for(auto j:i.second){
-                         cout << j << ", ";
-                    }
-                    cout << endl;
-               }
-          }
+          // void printList(){
+          //      for(auto i:adj){
+          //           cout << i.first << "-> ";
+          //           for(auto j:i.second){
+          //                cout << j << ", ";
+          //           }
+          //           cout << endl;
+          //      }
+          // }
 };
 
 int main(){
@@ -51,7 +51,7 @@ int main(){
           g.addEdge(u, v, w);
      }
      cout << endl;
-     g.printList();
+     // g.printList();
 
      vector<int> dist(n);
      for(int i=0; i<n; i++){
@@ -60,8 +60,8 @@ int main(){
 
      set<pair<int, int> > st;
 
-     dist[src] = 0;
-     st.insert(make_pair(0, src));
+     dist[1] = 0;
+     st.insert(make_pair(0, 1));
 
      while(!st.empty()){
           //fetch top record
@@ -69,7 +69,31 @@ int main(){
 
           int nodeDist = top.first;
           int topNode = top.second;
+          
+          //remove record now
+          st.erase(st.begin());
 
+          //traverse neighbours
+          for(auto it:g.adj[topNode]){
+               if(nodeDist + it.second < dist[it.first]){
+                    auto record = st.find(make_pair(dist[it.first], it.first));
+
+                    //if record found
+                    if(record != st.end()){
+                         st.erase(record);
+                    }
+
+                    //distance update
+                    dist[it.first] = nodeDist + it.second;
+
+                    //record push in set
+                    st.insert(make_pair(dist[it.first], it.first));
+               }
+          }
+
+          for(int i=0; i<dist.size(); i++){
+               cout << dist[i] << " ";
+          }
      }
 
 }
