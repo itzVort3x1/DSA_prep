@@ -15,9 +15,11 @@ class Graph{
      public:
           unordered_map<int, list<int> > adj;
           unordered_map<int, bool> visited;
-          stack<int> s;
+          unordered_map<int, int> parent;
+          queue<int> q;
           void addEdge(int u, int v){
                adj[u].push_back(v);
+               adj[v].push_back(u);
           }
 
           void printList(){
@@ -27,6 +29,26 @@ class Graph{
                          cout << j << ", ";
                     }
                     cout << endl;
+               }
+          }
+
+          void bfs(int src){
+               q.push(src);
+               visited[src] = true;
+               parent[src] = -1;
+
+               while(!q.empty()){
+                    int frontNode = q.front();
+                    q.pop();
+
+                    for(auto i:adj[frontNode]){
+                         if(!visited[i]){
+                              visited[i] = true;
+                              parent[i] = frontNode;
+                              q.push(i);
+                         }
+                    }
+
                }
           }
 
@@ -52,4 +74,23 @@ int main(){
      cout << endl;
      g.printList();
 
+     //do bfs
+     g.bfs(1);
+
+     vector<int> ans;
+
+     //setting target node;
+     int currNode = 8;
+     ans.push_back(currNode);
+
+     while(currNode != 1){
+          currNode = g.parent[currNode];
+          ans.push_back(currNode);
+     }
+
+     cout << "The shortest path is: ";
+     for(int i=ans.size()-1; i>=0; i--){
+          cout << ans[i] << " ";
+     }
+     cout << endl;
 }
