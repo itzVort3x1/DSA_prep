@@ -1,5 +1,5 @@
 //------------------------------------
-//      Shortest path in undirected graph
+//      Shortest Path in Directed Acyclic Graphs
 //------------------------------------
 
 #include<iostream>
@@ -53,5 +53,5 @@ int main(){
      }
      cout << endl;
      g.printList();
-     
+
 }
