@@ -4,6 +4,41 @@
 #include<list>
 using namespace std;
 
+int min(int a, int b){
+     if(a<b){
+          return a;
+     }
+     return b;
+}
+
+void dfs(int node, int parent, vector<int> &disc, vector<int> &low, unordered_map<int, bool> &vis, unordered_map<int, list<int> > &adj, vector<int> &ap, int timer){
+     vis[node] = true;
+     disc[node] = low[node] = timer++;
+     int child = 0;
+
+     for(auto it:adj[node]){
+          if(it == parent){
+               continue;
+          }
+          if(!vis[it]){
+               dfs(it, node, disc, low, vis, adj, ap, timer);
+               low[node] = min(low[node], low[it]);
+               //check ap or not
+               if(low[it] >= disc[node] && parent != -1){
+                    ap[node] = true;
+               }
+               child++;
+          }else {
+               low[node] = min(low[node], disc[it]);
+          }
+     }
+
+     if(parent == -1 && child > 1){
+          ap[node] = 1;
+     }
+
+}
+
 int main(){
 
      int n=5;
@@ -33,6 +68,25 @@ int main(){
      unordered_map<int, bool> vis;
      vector<int> ap(n,0);
 
+     for(int i=0; i<n; i++){
+          disc[i] = -1;
+          low[i] = -1;
+     }
+
+     //dfs
+     for(int i=0; i<n; i++){
+          if(!vis[i]){
+               dfs(i, -1, disc, low, vis, adj, ap, timer);
+          }
+     }
+
+     //print ap
+     cout << "Pring articulation points are as follows" << endl;
+     for(int i=0; i<n; i++){
+          if(ap[i] != 0){
+               cout << i << " ";
+          }
+     }cout << endl;
 
      return 0;
 }
