@@ -1,3 +1,6 @@
+//------------------------------------
+//      Articulation point (Based on Bridge in graphs)
+//------------------------------------
 #include<iostream>
 #include<unordered_map>
 #include<vector>
