@@ -74,20 +74,13 @@ int main(){
           }
       }
       
-
+     int sum = 0
      cout << "Key vector: " << endl;
      for(int i=0; i<key.size(); i++){
           cout << key[i] << endl;
+          sum+=key[i];
      }
 
-     // cout << "MST vector: " << endl;
-     // for(int i=0; i<mst.size(); i++){
-     //      cout << mst[i] << endl;
-     // }
-
-     // cout << "parent vector: " << endl;
-     // for(int i=0; i<parent.size(); i++){
-     //      cout << parent[i] << endl;
-     // }
+     cout << "Sum of minimum spanning tree is: " << sum << endl;
 
 }
