@@ -5,6 +5,7 @@
 #include<iostream>
 #include<vector>
 #include<unordered_map>
+#include<list>
 using namespace std;
 
 class Graph{
@@ -40,7 +41,7 @@ class Graph{
                return parent[node] = findParent(parent, parent[node]);
           }
 
-          void union(int u, int v, vector<int> &parent, vector<int> &rank){
+          void unionSet(int u, int v, vector<int> &parent, vector<int> &rank){
                u = findParent(parent, u);
                v = findParent(parent, v);
 
@@ -67,9 +68,9 @@ int main(){
 
      Graph g;
 
+     g.addEdge(1, 2, 1);
      g.addEdge(0, 1, 3);
      g.addEdge(0, 3, 5);
-     g.addEdge(1, 2, 1);
      g.addEdge(2, 3, 8);
 
      g.printList();
@@ -77,5 +78,21 @@ int main(){
      vector<int> parent(n);
      vector<int> rank(n);
      g.makeSet(parent, rank, n);
+
+     int minWeight = 0;
+
+     for(int i=0; i<m; i++){
+          int u = g.findParent(parent, g.adj[u].first);
+          int v = g.findParent(parent, g.adj[v].second.first);
+          int wt = g.adj[v].second.second;
+
+          if(u != v){
+               minWeight += wt;
+               g.unionSet(u, v, parent, rank);
+          }
+
+     }
+
+     cout << "Minium weight: " << minWeight << endl;
 
 }
