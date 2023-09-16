@@ -13,4 +13,5 @@
     <li><b>Problem-11: </b>Binary Search Algo</li>
     <li><b>Problem-12: </b>Find first occurance</li>
     <li><b>Problem-13: </b>Find last occurance</li>
+    <li><b>Problem-14: </b>Find The total occurance of a number</li>
 </ol>
