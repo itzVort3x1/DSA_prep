@@ -8,4 +8,9 @@
     <li><b>Problem-6: </b>Square root of a number using binary search.</li>
     <li><b>Problem-7: </b>Square root of a number using binary search upto a decimal point.</li>
     <li><b>Problem-8: </b>Book allocation problem.</li>
+    <li><b>Problem-9: </b>Painter's partition problem.</li>
+    <li><b>Problem-10: </b>Aggressive cows.</li>
+    <li><b>Problem-11: </b>Binary Search Algo</li>
+    <li><b>Problem-12: </b>Find first occurance</li>
+    <li><b>Problem-13: </b>Find last occurance</li>
 </ol>
