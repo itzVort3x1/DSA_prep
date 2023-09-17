@@ -14,4 +14,10 @@
     <li><b>Problem-14: </b>Rotate an array if a position K is given.</li>
     <li><b>Problem-15: </b>Check if the array is sorted and rotated.</li>
     <li><b>Problem-16: </b>Sum of two arrays.</li>
+    <li><b>Problem-17: </b>Check if two arrays are equal or not.</li>
+    <li><b>Problem-18: </b>First element to occur k times.</li>
+    <li><b>Problem-19: </b>Find duplicated in an array.</li>
+    <li><b>Problem-20: </b>Minimize the Heights.</li>
+    <li><b>Problem-21: </b>Move all negative elements to left and positive to right.</li>
+    <li><b>Problem-22: </b>Key Pair.</li>
 </ol>
