@@ -24,4 +24,5 @@
     <li><b>Problem-24: </b>Sort 0's, 1's and 2's.</li>
     <li><b>Problem-25: </b>Find the missing Number.</li>
     <li><b>Problem-26: </b>Find the duplicate Number.</li>
+    <li><b>Problem-27: </b>Common Elements.</li>
 </ol>
