@@ -22,4 +22,5 @@
     <li><b>Problem-22: </b>Key Pair.</li>
     <li><b>Problem-23: </b>Find Pivot index.</li>
     <li><b>Problem-24: </b>Sort 0's, 1's and 2's.</li>
+    <li><b>Problem-25: </b>Find the missing Number.</li>
 </ol>
