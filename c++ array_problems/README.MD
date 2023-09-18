@@ -25,4 +25,5 @@
     <li><b>Problem-25: </b>Find the missing Number.</li>
     <li><b>Problem-26: </b>Find the duplicate Number.</li>
     <li><b>Problem-27: </b>Common Elements.</li>
+    <li><b>Problem-28: </b>Find Pivot Element.</li>
 </ol>
