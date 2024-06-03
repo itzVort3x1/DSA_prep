@@ -16,4 +16,5 @@
     <li><b>Problem-14: </b>Find The total occurance of a number</li>
     <li><b>Problem-15: </b>Find the missing number in the array</li>
     <li><b>Problem-16: </b>Find the number in a nearly sorted array</li>
+    <li><b>Problem-16: </b>EKO-SPOJ</li>
 </ol>
