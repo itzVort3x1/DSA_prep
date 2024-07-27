@@ -1,25 +1,45 @@
 //------------------------------------
-//      Maximum Rectangular Area in a Histogram
-//      Link: https://www.codingninjas.com/codestudio/problems/delete-middle-element-from-stack_985246?leftPanelTab=0
+//      Next Smaller Element
 //------------------------------------
 
-#include<iostream>
+#include <iostream>
+#include <vector>
+#include <stack>
 using namespace std;
 
-void solve(stack<int>& myStack, int x){
-    if(myStack.empty()){
-        myStack.push(x);
-        return;
-    }
-    
-    int num = myStack.top();
-    myStack.pop();
-    solve(myStack, x);
-    myStack.push(num);
-}
-stack<int> pushAtBottom(stack<int>& myStack, int x) 
+vector<int> nextSmallerElement(int *arr, int size, vector<int> &ans)
 {
-    // Write your code here.
-    solve(myStack, x);
-    return myStack;
+     stack<int> st;
+     st.push(-1);
+
+     for (int i = size - 1; i >= 0; i--)
+     {
+          int curr = arr[i];
+          while (st.top() >= curr)
+          {
+               st.pop();
+          }
+          ans[i] = st.top();
+
+          st.push(curr);
+     }
+
+     return ans;
+}
+
+int main()
+{
+     int arr[5] = {8, 4, 6, 2, 3};
+     int size = 5;
+
+     vector<int> ans(size);
+
+     ans = nextSmallerElement(arr, size, ans);
+
+     for (int i = 0; i < ans.size(); i++)
+     {
+          cout << ans[i] << " ";
+     }
+
+     return 0;
 }
