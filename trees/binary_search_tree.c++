@@ -142,9 +142,29 @@ Node* deleteFromBst(Node* root, int val){
 
 }
 
+bool searchInBST(Node* root, int target){
+     if(root == NULL){
+          return false;
+     }
+
+     if(root->data == target){
+          return true;
+     }
+
+     bool leftAns = false;
+     bool rightAns = false;
+     if(target > root->data){
+          rightAns = searchInBST(root->right);
+     }else {
+          leftAns = searchInBST(root->left);
+     }
+
+     return leftAns || rightAns;
+}
+
 int main(){
      Node* root = NULL;
-
+     // 50 30 60 25 40 70 80 55 -1
      cout << "Enter data to create BST" << endl;
 
      takeInput(root);
@@ -155,5 +175,17 @@ int main(){
 
      levelOrderTraversal(root);
 
+     int t;
+     cout << "Enter the target: " << endl;
+     cin >> t;
+
+     while(t != -1){
+          bool ans = searchInBST(root, t);
+          if(ans){
+               cout << "Found" << endl;
+          }else {
+               cout << "Not Found" << endl;
+          }
+     }
      return 0;
 }
