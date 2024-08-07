@@ -73,6 +73,19 @@ void takeInput(Node* &root){
      }
 }
 
+NOde* maxVal(Node* root){
+     if(root == NULL){
+          return root;
+     }
+
+     Node* temp = root;
+     while(temp->right != NULL){
+          temp = temp -> right;
+     }
+
+     return temp;
+}
+
 Node* minVal(Node* root){
      if(root == NULL){
         return root;
