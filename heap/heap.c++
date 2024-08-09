@@ -40,7 +40,58 @@ class Heap {
                     cout << arr[i] << " ";
                }
           }
+
+          int deleteFromHeap(){
+               int answer = arr[i];
+               // replace
+               arr[1] = arr[size];
+               // delete last element
+               size--;
+
+               int index = 1;
+               while(index < size) {
+                    int leftIndex = 2*i;
+                    int rightIndex = 2*i + 1;
+
+                    //find out 
+                    int largestKaIndex = index;
+                    if(leftIndex <= size && arr[largestKaIndex]< arr[leftIndex]){
+                         largestKaIndex = leftIndex;
+                    }
+                    if(rightIndex <= size && arr[largestKaIndex] < arr[rightIndex]){
+                         largestKaIndex = rightIndex;
+                    }
+
+                    if(index = largestKaIndex){
+                         break;
+                    }else {
+                         swap(arr[index], arr[largestKaIndex]);
+                         index = largestKaIndex;
+                    }
+               }
+               return answer;
+          }
 };
+
+void heapify(int *arr, int n, int index){
+     int leftIndex = 2*index;
+     int rightIndex = 2*index + 1;
+     int largestKaIndex = index;
+
+     if(leftIndex <= n && arr[leftIndex] > arr[largestKaIndex]){
+          largestKaIndex = leftIndex;
+     }
+
+     if(rightIndex <= n && arr[rightIndex] > arr[largestKaIndex]){
+          largestKaIndex = rightIndex;
+     }
+
+     if(index != largestKaIndex){
+          swap(arr[index], arr[largestKaIndex]);
+          index = largestKaIndex;
+          heapify(arr, n, index);
+     }
+}
 
 int main() {
      Heap h(20);
@@ -52,6 +103,8 @@ int main() {
 
      cout << "Printing the content of heap: " << endl;
      h.printHeap();
+     int ans = h.deleteFromHeap();
+     cout << "Answer: " << ans << endl;
 
      return 0;
 }
