@@ -42,7 +42,7 @@ class Heap {
           }
 
           int deleteFromHeap(){
-               int answer = arr[i];
+               int answer = arr[1];
                // replace
                arr[1] = arr[size];
                // delete last element
@@ -50,8 +50,8 @@ class Heap {
 
                int index = 1;
                while(index < size) {
-                    int leftIndex = 2*i;
-                    int rightIndex = 2*i + 1;
+                    int leftIndex = 2*index;
+                    int rightIndex = 2*index + 1;
 
                     //find out 
                     int largestKaIndex = index;
@@ -62,7 +62,7 @@ class Heap {
                          largestKaIndex = rightIndex;
                     }
 
-                    if(index = largestKaIndex){
+                    if(index == largestKaIndex){
                          break;
                     }else {
                          swap(arr[index], arr[largestKaIndex]);
@@ -103,8 +103,12 @@ int main() {
 
      cout << "Printing the content of heap: " << endl;
      h.printHeap();
+     cout << endl;
      int ans = h.deleteFromHeap();
      cout << "Answer: " << ans << endl;
+
+     cout << "Printing the content of heap: " << endl;
+     h.printHeap();
 
      return 0;
 }
