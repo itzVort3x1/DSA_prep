@@ -93,6 +93,13 @@ void heapify(int *arr, int n, int index){
      }
 }
 
+void buildHeap(int arr[], int n){
+     // Why n/2? coz n/2+1 is index of leaf nodes and no need to process leaf nodes.
+     for(int index = n/2; index>0; index--){
+          heapify(arr, n, index);
+     }
+}
+
 int main() {
      Heap h(20);
      h.insert(10);
