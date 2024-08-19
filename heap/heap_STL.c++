@@ -3,27 +3,52 @@
 using namespace std;
 
 int main(){
-     //maxheap
+     // max heap
      priority_queue<int> pq;
 
-     pq.push(4);
-     pq.push(2);
-     pq.push(5);
-     pq.push(1);
+     //INSERTION
+     pq.push(10);
+     pq.push(20);
+     pq.push(30);
+     pq.push(40);
+     pq.push(50);
 
-     cout << "Element at top: " << pq.top() << endl;
+     cout << "Top element of heap: " << pq.top() << endl;
+
      pq.pop();
-     cout << "Element at top: " << pq.top() << endl;
 
-     //min heap
-     priority_queue<int, vector<int>, greater<int> > minheap;
+     cout << "Top element of heap: " << pq.top() << endl;
 
-     minheap.push(4);
-     minheap.push(2);
-     minheap.push(5);
-     minheap.push(1);
+     cout << "Size of max heap: " << pq.size() << endl;
 
-     cout << "Element at top of minheap: " << minheap.top() << endl;
+     if(pq.empty()){
+          cout << "Heap is empty" << endl;
+     }else {
+          cout << "Not empty" << endl;
+     }
+
+     // min heap
+     priority_queue<int, vector<int>, greater<int> > pqm;
+
+     pqm.push(100);
+     pqm.push(90);
+     pqm.push(70);
+     pqm.push(60);
+     pqm.push(50);
+
+     cout << "Top element of min heap: " << pqm.top() << endl;
+
+     pqm.pop();
+     
+     cout << "Top element of min heap: " << pqm.top() << endl;
+
+     cout << "Size of max heap: " << pqm.size() << endl;
+
+     if(pqm.empty()){
+          cout << "Heap is empty" << endl;
+     }else {
+          cout << "Not empty" << endl;
+     }
 
      return 0;
 }
