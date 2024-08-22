@@ -18,7 +18,7 @@ class TrieNode {
 
 // insertion
 void insertWord(TrieNode* root, string word){
-     cout << "recieved word: " << word << " for insertion " << endl;
+     // cout << "recieved word: " << word << " for insertion " << endl;
      if(word.length() == 0){
           root->isTerminal = true;
           return;
@@ -41,11 +41,45 @@ void insertWord(TrieNode* root, string word){
      insertWord(child, word.substr(1)); 
 }
 
+bool searchWord(TrieNode* root, string word){
+     //base case
+     if(word.length() == 0){
+          return root->isTerminal;
+     }
+
+     char ch = word[0];
+     int index = ch - 'a';
+     TrieNode* child;
+     if(root->children[index] != NULL){
+          // present
+          child = root->children[index];
+     }else {
+          return false;
+     }
+     return searchWord(child, word.substr(1));
+}
+
 int main() {
      TrieNode* root = new TrieNode('-');
 
-     insertWord(root, "dona"); 
+     insertWord(root, "cater"); 
+     insertWord(root, "care"); 
+     insertWord(root, "com"); 
+     insertWord(root, "lover"); 
+     insertWord(root, "loved"); 
+     insertWord(root, "load"); 
+     insertWord(root, "lov"); 
+     insertWord(root, "bat"); 
+     insertWord(root, "cat"); 
+     insertWord(root, "car"); 
 
+     cout << "Insertion Done" << endl;
+
+     if(searchWord(root, "love")){
+          cout << "Word found" << endl;
+     }else {
+          cout << "Word not found" << endl;
+     }
 
      return 0;
 }
