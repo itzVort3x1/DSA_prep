@@ -59,6 +59,25 @@ bool searchWord(TrieNode* root, string word){
      return searchWord(child, word.substr(1));
 }
 
+void deleteWord(TrieNode* root, string word){
+     if(word.length() == 0){
+          root->isTerminal = false;
+          return;
+     }
+
+     char ch = word[0];
+     int index = ch - 'a';
+     TrieNode* child;
+     
+     if(root->children[index] != NULL){
+          child = root->children[index];
+     }else {
+          return;
+     }
+
+     deleteWord(child, word.substr(1));
+}
+
 int main() {
      TrieNode* root = new TrieNode('-');
 
@@ -75,7 +94,15 @@ int main() {
 
      cout << "Insertion Done" << endl;
 
-     if(searchWord(root, "love")){
+     if(searchWord(root, "loved")){
+          cout << "Word found" << endl;
+     }else {
+          cout << "Word not found" << endl;
+     }
+
+     deleteWord(root, "loved");
+
+     if(searchWord(root, "loved")){
           cout << "Word found" << endl;
      }else {
           cout << "Word not found" << endl;
