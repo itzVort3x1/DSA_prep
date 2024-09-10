@@ -84,6 +84,18 @@ class Graph{
                     }
                }
           }
+
+          void dfs(T src, unordered_map<T, bool> &vis){
+               vis[src] = true;
+               cout << src << endl;
+
+               for(auto nigh: adjlist2[src]){
+                    T nbrData = nigh.first;
+                    if(!vis[nbrData]){
+                         dfs(nbrData, vis);
+                    }
+               }
+          }
 };
 
 int main(){
@@ -91,18 +103,20 @@ int main(){
      Graph<char> g;
 
      g.addWeightedEdge('a','b',5,0);
-     g.addWeightedEdge('b','c',10,0);
-     g.addWeightedEdge('d','e',20,0);
-     g.addWeightedEdge('f','f',30,0);
-     // g.addWeightedEdge('c','e',30,0);
-     // g.addWeightedEdge('e','f',30,0);
+     g.addWeightedEdge('a','c',10,0);
+     g.addWeightedEdge('c','d',20,0);
+     g.addWeightedEdge('c','e',30,0);
+     g.addWeightedEdge('d','e',30,0);
+     g.addWeightedEdge('e','f',30,0);
 
      unordered_map<char, bool> vis;
      for(char node ='a'; node <= 'f'; node++){
           if(!vis[node]){
-               g.bfsTraversal(node, vis);
+               // g.bfsTraversal(node, vis);
+               g.dfs(node, vis);
           }
      }
+
 
      return 0;
 
