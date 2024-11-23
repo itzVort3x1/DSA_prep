@@ -7,4 +7,7 @@
     <li><b>Problem-5: </b>Valid Palindrome.</li>
     <li><b>Problem-6: </b>Max occuring character.</li>
     <li><b>Problem-7: </b>Remove all occurences of a substring.</li>
+    <li><b>Problem-8: </b>Find Duplicate characters in a string.</li>
+    <li><b>Problem-9: </b>Roman to Integer.</li>
+    <li><b>Problem-10: </b>Integer to Roman.</li>
 </ol>
