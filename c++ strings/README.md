@@ -10,4 +10,5 @@
     <li><b>Problem-8: </b>Find Duplicate characters in a string.</li>
     <li><b>Problem-9: </b>Roman to Integer.</li>
     <li><b>Problem-10: </b>Integer to Roman.</li>
+    <li><b>Problem-11: </b>Find the Index of the First Occurrence in a String.</li>
 </ol>
