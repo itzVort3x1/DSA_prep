@@ -6,118 +6,52 @@
 using namespace std;
 
 template <typename T>
-class Graph{
+class Graph {
      public:
-          unordered_map<T, list<T> > adjlist;
-          unordered_map<T, list<pair<T,int> > > adjlist2;
+          unordered_map<T, list<T>> adj;
 
-          void addEdge(T u, T v, bool direction){
-               // direction -> 0 -> undirected
-               // direction -> 1 -> directed
+     void addEdge(T u, T v, bool direction){
+          // direction = 0 -> undirected, 1 -> directed
 
-               if(direction == 1){
-                    // u se v ke taraf 
-                    // u->v
-                    adjlist[u].push_back(v);
-               }else {
-                    // u -- v
-                    adjlist[u].push_back(v);
-                    adjlist[v].push_back(u);
+          // create an edge form u to v
+          adj[u].push_back(v);
+
+          if(!direction){
+               adj[v].push_back(u);
+          }
+
+     }
+
+     void printAdjList(){
+          for(auto i:adj){
+               cout << i.first << "-> ";
+               for(auto j:i.second){
+                    cout << j << ", ";
                }
-
-               cout << endl << "Printing adj list" << endl;
-               printAdjList();
                cout << endl;
           }
-
-          void printAdjList(){
-               for(auto i:adjlist){
-                    cout << i.first << "-> {";
-                    for(auto neigh:i.second){
-                         cout << neigh << ",";
-                    }
-                    cout << "}" << endl;
-               }
-          }      
-
-          void addWeightedEdge(T u, T v, int wt, bool direction){
-               // direction = 0 -> undirected
-               // direction = 1 -> directed
-               if(direction == 1){
-                    adjlist2[u].push_back(make_pair(v, wt));
-               }else {
-                    adjlist2[u].push_back(make_pair(v, wt));
-                    adjlist2[v].push_back(make_pair(u, wt));
-               }
-               cout << endl << "Printing weighted adj list" << endl;
-               printWeightedAdjList();
-               cout << endl;
-          }
-
-          void printWeightedAdjList() {
-               for(auto i:adjlist2){
-                    cout << i.first << "->{";
-                    for(pair<T,int> p:i.second){
-                         cout << "{" << p.first << ", " << p.second << "}, ";
-                    }
-                    cout << "}" << endl;
-               }
-          }
-
-          void bfsTraversal(T src, unordered_map<T, bool> &vis){
-               queue<T> q;
-               q.push(src);
-               vis[src] = true;
-
-               while(!q.empty()){
-                    T frontNode = q.front();
-                    cout << frontNode << " ";
-                    q.pop();
-
-                    for(auto nbr: adjlist2[frontNode]){
-                         T nbrData = nbr.first;
-
-                         if(!vis[nbrData]){
-                              q.push(nbrData);
-                              vis[nbrData] = true;
-                         }
-                    }
-               }
-          }
-
-          void dfs(T src, unordered_map<T, bool> &vis){
-               vis[src] = true;
-               cout << src << endl;
-
-               for(auto nigh: adjlist2[src]){
-                    T nbrData = nigh.first;
-                    if(!vis[nbrData]){
-                         dfs(nbrData, vis);
-                    }
-               }
-          }
+     }
 };
 
 int main(){
 
-     Graph<char> g;
+     int n;
+     cout << "Enter the number of edges" << endl;
+     cin >> n;
 
-     g.addWeightedEdge('a','b',5,0);
-     g.addWeightedEdge('a','c',10,0);
-     g.addWeightedEdge('c','d',20,0);
-     g.addWeightedEdge('c','e',30,0);
-     g.addWeightedEdge('d','e',30,0);
-     g.addWeightedEdge('e','f',30,0);
+     int m;
+     cout << "Enter the number of edges" << endl;
+     cin >> m;
 
-     unordered_map<char, bool> vis;
-     for(char node ='a'; node <= 'f'; node++){
-          if(!vis[node]){
-               // g.bfsTraversal(node, vis);
-               g.dfs(node, vis);
-          }
+     Graph<int> g;
+
+     for(int i = 0; i<m; i++){
+          int u, v;
+          cin >> u >> v;
+          //creating an undirected graph
+          g.addEdge(u,v, 0);
      }
 
-
-     return 0;
+     g.printAdjList();
 
 }
