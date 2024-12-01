@@ -13,7 +13,7 @@ class graph {
     public:
         unordered_map<T, list<T>> adj;
 
-    void addEdge(T u, T v, bool direction){
+    void addEdge(T u,T v, bool direction){
         adj[u].push_back(v);
 
         if(!direction){
