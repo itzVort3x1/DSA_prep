@@ -1,3 +1,6 @@
+//------------------------------------
+//      Topological sort
+//------------------------------------
 #include<iostream>
 #include<vector>
 #include<unordered_map>
@@ -31,7 +34,7 @@ class graph {
         }
     }
 
-    void topoSort(T node, unordered_map<T, bool> &visited, stack<T> &st) {
+    void topoSort(int node, unordered_map<T, bool> &visited, stack<T> &st) {
         // Mark the node as visited
         visited[node] = true;
 
