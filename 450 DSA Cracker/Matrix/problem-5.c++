@@ -1,6 +1,6 @@
 //------------------------------------
-//      Sorted matrix
-//      Link: https://www.geeksforgeeks.org/problems/sorted-matrix2333/1
+//      Rotate by 90 degree
+//      Link: https://www.geeksforgeeks.org/problems/rotate-by-90-degree0356/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
 //------------------------------------
 
 #include <iostream>
