@@ -3,7 +3,7 @@
 //      Link: https://leetcode.com/problems/shifting-letters-ii/description/
 //------------------------------------
 
-#include<iostream>
+#include <iostream>
 #include<vector>
 using namespace std;
 
