@@ -55,7 +55,7 @@ int solveDp(int dice, int faces, int target, vector<vector<int>> &dp){
 
     int ans = 0;
     for(int i = 1; i<=faces; i++){
-        ans  = ans + solveRec(dice - 1, faces, target - i);
+        ans  = ans + solveDp(dice - 1, faces, target - i, dp);
     }
 
     return dp[dice][target] = ans;
