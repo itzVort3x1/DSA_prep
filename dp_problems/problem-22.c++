@@ -7,7 +7,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int solve(vector<int> nums1, vector<int> nums2, int index, bool swapped){
+int solveRec(vector<int> nums1, vector<int> nums2, int index, bool swapped){
     // base case
     if(index == nums1.size()){
         return 0;
@@ -23,7 +23,7 @@ int solve(vector<int> nums1, vector<int> nums2, int index, bool swapped){
     }
 
     if(nums1[index] > prev1 && nums2[index] > prev2){
-        ans = solve(nums1, nums2 ,index + 1, 0);
+        ans = solveRec(nums1, nums2 ,index + 1, 0);
     }    
 
 }
