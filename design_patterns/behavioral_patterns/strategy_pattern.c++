@@ -11,7 +11,9 @@ using namespace std;
 class ShoppingCart {
     function<void(int)> paymentMethod;
     public:
-        ShoppingCart(function<void(int)> method) : paymentMethod(method) {}
+        ShoppingCart(function<void(int)> method) {
+            this->paymentMethod = method;
+        }
 
         void checkout(int amount) {
             paymentMethod(amount);

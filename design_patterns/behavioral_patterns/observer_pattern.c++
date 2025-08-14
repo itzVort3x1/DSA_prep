@@ -10,7 +10,9 @@ using namespace std;
 class Display {
     string name;
 public:
-    Display(const string& n) : name(n) {}
+    Display(const string& n) {
+        this->name = n;
+    }
 
     void update(int temp) {
         cout << name << " received update: Temperature is " << temp << "°C\n";
