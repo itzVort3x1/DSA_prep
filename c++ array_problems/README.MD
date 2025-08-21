@@ -29,4 +29,5 @@
     <li><b>Problem-29: </b>Split an array into two equal Sum subarrays.</li>
     <li><b>Problem-30: </b>Subarray of size k with given sum.</li>
     <li><b>Problem-31: </b>Number of Zero-Filled Subarrays</li>
+    <li><b>Problem-32: </b>Insert Interval</li>
 </ol>
