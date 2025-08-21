@@ -31,6 +31,7 @@
     <li><b>Problem-31: </b>Number of Zero-Filled Subarrays</li>
     <li><b>Problem-32: </b>Insert Interval</li>
     <li><b>Problem-33: </b>Merge Intervals</li>
-    <li><b>Problem-33: </b>Non-overlapping Intervals</li>
-    <li><b>Problem-34: </b>Meeting Rooms</li>
+    <li><b>Problem-34: </b>Non-overlapping Intervals</li>
+    <li><b>Problem-35: </b>Meeting Rooms</li>
+    <li><b>Problem-36: </b>Meeting Rooms 2</li>
 </ol>
