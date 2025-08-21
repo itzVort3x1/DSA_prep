@@ -30,4 +30,6 @@
     <li><b>Problem-30: </b>Subarray of size k with given sum.</li>
     <li><b>Problem-31: </b>Number of Zero-Filled Subarrays</li>
     <li><b>Problem-32: </b>Insert Interval</li>
+    <li><b>Problem-33: </b>Merge Intervals</li>
+    <li><b>Problem-33: </b>Non-overlapping Intervals</li>
 </ol>
