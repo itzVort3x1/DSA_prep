@@ -34,4 +34,6 @@
     <li><b>Problem-34: </b>Non-overlapping Intervals</li>
     <li><b>Problem-35: </b>Meeting Rooms</li>
     <li><b>Problem-36: </b>Meeting Rooms 2</li>
+    <li><b>Problem-37: </b>Maximum Subarray</li>
+    <li><b>Problem-38: </b>Jump Game</li>
 </ol>
