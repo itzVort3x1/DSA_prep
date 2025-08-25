@@ -1,46 +1,41 @@
 //------------------------------------
-//      Course Schedule
+//      Decode ways
 //------------------------------------
+
 
 #include<iostream>
 #include<vector>
 using namespace std;
 
 int main() {
-    int numCourses = 2;
-    vector<vector<int>> prerequisites = {{1,0}, {0,1}};
+    string s = "226";
 
-    vector<vector<int>> adj(numCourses);
-    vector<int> indegree(numCourses, 0);
-    vector<int> ans;
-
-    for(auto x:prerequisites) {
-        adj[x[0]].push_back(x[1]);
-        indegree[x[1]]++;
+    if(s.empty() || s[0] == '0') {
+        cout << "Number of possible combinations is: " << 0 << endl;
+        return 0;
     }
 
-    queue<int> q;
+    int n = s.length();
 
-    for(int i = 0; i<indegree.size(); i++) {
-        if(indegree[i] == 0) {
-            q.push(i);
+    vector<int> dp(n+1, 0);
+
+    dp[0] = 1;
+    dp[1] = 1;
+
+    for(int i = 2; i<=n; i++) {
+        int oneDigit = s[i-1] - '0';
+        int twoDigits = stoi(s.substr(i-2, 2));
+
+        if(oneDigit != 0) {
+            dp[i] += dp[i-1];
+        }
+
+        if(10 <= twoDigits && twoDigits <= 26) {
+            dp[i] += dp[i-2];
         }
     }
 
-    while(!q.empty()) {
-        int t = q.front();
-        ans.push_back(t);
-        q.pop();
-
-        for(auto x:adj[t]) {
-            indegree[x]--;
-            if(indegree[x] == 0) {
-                q.push(x);
-            }
-        }
-    }
-
-    cout << "Is it possible to complete the course?: " << (ans.size() == numCourses) << endl;
+    cout << "Number of possible combinations is: " << dp[n] << endl;
 
     return 0;
 }
