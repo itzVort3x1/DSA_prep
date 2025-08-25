@@ -2,7 +2,6 @@
 //      Maimum Product Subarray
 //------------------------------------
 
-
 #include<iostream>
 #include<vector>
 #include<climits>
